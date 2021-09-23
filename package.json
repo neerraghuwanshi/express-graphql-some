@@ -1,0 +1,27 @@
+{
+  "name": "express-authentication",
+  "version": "1.0.0",
+  "description": "An authentication setup for REST APIs with Express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "start-server": "node app.js",
+    "start:dev": "nodemon app.js"
+  },
+  "author": "Neer Raghuwanshi",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.1",
+    "helmet": "^4.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
+}
