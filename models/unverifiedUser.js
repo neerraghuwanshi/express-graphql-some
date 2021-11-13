@@ -3,27 +3,27 @@ import mongoose from 'mongoose'
 
 const Schema = mongoose.Schema
 
-const userSchema = new Schema(
+const unverifiedUserSchema = new Schema(
     {
-        token: {
-            type: String,
-            required: false,
-        },
         email: {
             type: String,
-            required: true,
+            required: true
         },
         firstName: {
             type: String,
-            required: true,
+            required: true
         },
         lastName: {
             type: String,
-            required: true,
+            required: true
         },
         password: {
             type: String,
-            required: true,
+            required: true
+        },
+        otp: {
+            type: String,
+            required: true
         },
     },
     { 
@@ -32,4 +32,4 @@ const userSchema = new Schema(
 )
 
 
-export default mongoose.model('User', userSchema)
+export default mongoose.model('UnverifiedUser', unverifiedUserSchema)
