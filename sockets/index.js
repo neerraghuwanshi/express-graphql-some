@@ -11,9 +11,13 @@ const sockets =  {
     init: httpServer => {
         io = new Server(httpServer, {
             cors: {
-                origin: "https://localhost:3000",
-                methods: ["GET", "POST"],
                 credentials: true,
+                origin: (
+                    process.env.PRODUCTION ? 
+                    "https://localhost:3000" :
+                    "https://next-some.vercel.app/"
+                ),
+                methods: ["GET", "POST"],
             }
         })
         io.sockets.on('connection', (socket) => {
