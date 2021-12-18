@@ -13,9 +13,9 @@ const sockets =  {
             cors: {
                 credentials: true,
                 origin: (
-                    process.env.PRODUCTION ? 
-                    "http://localhost:3000" :
-                    "https://next-some.vercel.app/"
+                    process.env.PRODUCTION ?
+                    "https://next-some.vercel.app/" :
+                    "http://localhost:3000"
                 ),
                 methods: ["GET", "POST"],
             }
